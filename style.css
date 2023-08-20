@@ -1,0 +1,15 @@
+#todotable{
+    width: 80vw;
+}
+.card-body{
+    width: 85vw;
+}
+#table-container{
+    width:85vw;
+    margin-left: 7vw;
+}
+#addtask{
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 44vw;
+}
