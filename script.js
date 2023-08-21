@@ -1,4 +1,4 @@
-const add = document.getElementById("addtask")
+const addbutton = document.getElementById("addtask")
 const table = document.getElementById("todotable")
 
 function addtask(){
@@ -19,15 +19,35 @@ function addrow(){
     var cell4 = row.insertCell(2);
     
     var taskitem = document.createElement('input')
+    var deletebutton = document.createElement('button')
+    var checkbutton = document.createElement('button')
     
     
     cell0.innerHTML = sr;
     cell1.appendChild(taskitem);
-    cell4.innerHTML = "Status";
-
-    
+    cell4.appendChild(deletebutton);
+    deletebutton.innerHTML = "Delete"
+    cell4.appendChild(checkbutton);
+    checkbutton.innerHTML = "Completed"
+    deletebutton.addEventListener("click",deletetask)
+    checkbutton.addEventListener("click",checktask)
     sr++;
     check()
 }
+
+function deletetask(){
+
+    console.log("Task " + (sr-1) + " Deleted.")
+    taskitem.removeChild(row);
+
+}
+
+function checktask(){
+
+    console.log("Check button clicked.")
+
+}
+
 var sr = 1;
-add.addEventListener("click",addrow)
+addbutton.addEventListener("click",addrow)
+
