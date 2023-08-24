@@ -25,29 +25,30 @@ function addrow(){
     
     cell0.innerHTML = sr;
     cell1.appendChild(taskitem);
+    cell4.appendChild(checkbutton);
     cell4.appendChild(deletebutton);
     deletebutton.innerHTML = "Delete"
-    cell4.appendChild(checkbutton);
-    checkbutton.innerHTML = "Completed"
+    checkbutton.innerHTML = "Assign"
     deletebutton.addEventListener("click",deletetask)
     checkbutton.addEventListener("click",checktask)
     sr++;
     check()
+
+    function deletetask(){
+
+        console.log("Task " + (sr-1) + " Deleted.")
+        taskitem.removeChild(taskitem);
+    
+    }
+
+    function checktask(){
+
+        console.log("Check button clicked.")
+        checkbutton.innerHTML = "Check"
+    
+    }
+
 }
-
-function deletetask(){
-
-    console.log("Task " + (sr-1) + " Deleted.")
-    taskitem.removeChild(row);
-
-}
-
-function checktask(){
-
-    console.log("Check button clicked.")
-
-}
-
 var sr = 1;
 addbutton.addEventListener("click",addrow)
 
