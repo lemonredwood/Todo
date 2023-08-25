@@ -20,11 +20,14 @@ function addrow(){
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell4 = row.insertCell(1);
-    
+    cell4.className = "tablerows action-items";
+    cell1.className = "tablerows display-items";
+
     var displaytaskitem = document.createElement('label')
     var deletebutton = document.createElement('button')
     var checkbutton = document.createElement('button')
-
+    deletebutton.id="deletebutton";
+    checkbutton.id="checkbtton"
     
     
     cell1.appendChild(displaytaskitem);
@@ -32,13 +35,13 @@ function addrow(){
     taskitem.value = "";
     cell4.appendChild(checkbutton);
     cell4.appendChild(deletebutton);
-    deletebutton.innerHTML = "Delete"
+    deletebutton.innerHTML = "Del"
     checkbutton.innerHTML = "Check"
     deletebutton.addEventListener("click",deletetask)
     checkbutton.addEventListener("click",function(){
-        var listitem = document.createElement("ul");
+        var listitem = document.createElement("li");
         completetasklist.appendChild(listitem);
-        listitem.innerHTML=taskitem.value;
+        listitem.innerHTML=displaytaskitem.innerHTML;
         deletetask()
     });
 

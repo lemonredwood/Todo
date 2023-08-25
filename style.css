@@ -1,5 +1,15 @@
+body{
+    background-color:black;
+}
+.completed{
+    color: azure;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+}
+
 #todotable{
-    width: 50vw;
+    width: 53vw;
 }
 .card-body{
     width: 85vw;
@@ -12,6 +22,9 @@
     border-radius: 8px;
     padding: 10px;
     margin-left: 44vw;
+    background-color:turquoise;
+    border: none;
+    font-weight: 900 ;
 }
 #taskinput{
     opacity: 1;
@@ -23,13 +36,13 @@
     top: 20%;
     left: 0;
     width: 30%;
-    height: 30%;
+    height: 40%;
     border: solid;
     border-radius:10px ;
     background-color: rgba(0, 0, 0, 0.2);
 }
 .modal-content{
-    background-color: azure;
+    background-color: turquoise;
     padding: 20px;
     border-radius: 5px;
     position: absolute;
@@ -41,11 +54,68 @@
 }
 #close-button{
     cursor:pointer;
+    background-color:turquoise ;
     float: right;
+    border: none;
+
+
 
 }
 #modal-head{
     font-size: xx-large;
     font-weight: 900;
     text-align: center;
+}
+#save-button{
+    border: none;
+    background-color: crimson;
+    font-weight: 900 ;
+    color: white;
+    border-radius: 15px ;
+    width: 50%;
+    height:15%;
+    margin-left: 25%;
+    margin-top: 25%;
+    align-items: center;    
+
+}
+#taskitem{
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.display-items{
+    width: 70%;
+}
+.action-items{
+    width: 30%;
+    padding-bottom: 5px;
+}
+.card{
+    background-color: crimson;
+}
+th.tablehead{
+    background-color: crimson;
+    color: white;
+    font-weight: 900;
+    font-size: larger;
+}
+.tablerows.display-items{
+    background-color: crimson;
+    color: white;
+    font-weight: 800;
+}
+.tablerows.action-items{
+    background-color: crimson;
+}
+#checkbutton{
+    border-radius: 100px;
+    padding: 2px;
+    margin-left: 2px;
+}
+#deletebutton{
+    border-radius: 50px;
+    padding: 2px;
+    margin-left: 2px;
 }
