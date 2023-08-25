@@ -48,9 +48,6 @@
                         <table id="todotable" class="table text-center p-2">
                                 <thead>
                                     <th>
-                                        Sr no.
-                                    </th>
-                                    <th>
                                         Task
                                     </th>
                                     <th>
@@ -61,11 +58,28 @@
                                    
                                 </tbody>
                         </table>
+                        
                     </div>
                 </div>
             </div>
         </div>
+        <div>
+            <li id="completedtasks">
+                    
+            </li>
+        </div>
     </div>
+    
+    <div class="modal" id="modal">
+        
+        <div class="modal-content">
+            <span  type="button" ><button id="close-button">&times;</button></span>
+            <div id="modal-head">New Task</div>
+            <input id="taskitem" placeholder="Enter Task">
+            <button id="save-button">Save</button>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

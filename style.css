@@ -1,15 +1,51 @@
 #todotable{
-    width: 80vw;
+    width: 50vw;
 }
 .card-body{
     width: 85vw;
 }
 #table-container{
-    width:85vw;
-    margin-left: 7vw;
+    width:55vw;
+    margin-left: 20vw;
 }
 #addtask{
     border-radius: 8px;
     padding: 10px;
     margin-left: 44vw;
+}
+#taskinput{
+    opacity: 1;
+}
+.modal{
+    display: none;
+    position: fixed;
+    margin-left:32%;
+    top: 20%;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    border: solid;
+    border-radius:10px ;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.modal-content{
+    background-color: azure;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+#close-button{
+    cursor:pointer;
+    float: right;
+
+}
+#modal-head{
+    font-size: xx-large;
+    font-weight: 900;
+    text-align: center;
 }

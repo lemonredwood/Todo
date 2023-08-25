@@ -1,54 +1,55 @@
 const addbutton = document.getElementById("addtask")
 const table = document.getElementById("todotable")
+const completetasklist = document.getElementById("completedtasks")
+const closebutton = document.getElementById("close-button")
+const savebutton = document.getElementById("save-button")
 
-function addtask(){
-    console.log("Task to be added now.")
+addbutton.addEventListener("click",()=>{
+    modal.style.display = "block";
+})
 
-}
+closebutton.addEventListener("click",()=>{
+    modal.style.display = "none";
+})
 
-function check(){
-    console.log("Function called")
-    addtask()
-}
+savebutton.addEventListener("click",addrow)
 
 function addrow(){
     
+    modal.style.display = "none";
     var row = table.insertRow(-1);
-    var cell0 = row.insertCell(0);
-    var cell1 = row.insertCell(1);
-    var cell4 = row.insertCell(2);
+    var cell1 = row.insertCell(0);
+    var cell4 = row.insertCell(1);
     
-    var taskitem = document.createElement('input')
+    var displaytaskitem = document.createElement('label')
     var deletebutton = document.createElement('button')
     var checkbutton = document.createElement('button')
+
     
     
-    cell0.innerHTML = sr;
-    cell1.appendChild(taskitem);
+    cell1.appendChild(displaytaskitem);
+    displaytaskitem.innerHTML=taskitem.value;
+    taskitem.value = "";
     cell4.appendChild(checkbutton);
     cell4.appendChild(deletebutton);
     deletebutton.innerHTML = "Delete"
-    checkbutton.innerHTML = "Assign"
+    checkbutton.innerHTML = "Check"
     deletebutton.addEventListener("click",deletetask)
-    checkbutton.addEventListener("click",checktask)
-    sr++;
-    check()
+    checkbutton.addEventListener("click",function(){
+        var listitem = document.createElement("ul");
+        completetasklist.appendChild(listitem);
+        listitem.innerHTML=taskitem.value;
+        deletetask()
+    });
+
 
     function deletetask(){
 
-        console.log("Task " + (sr-1) + " Deleted.")
-        taskitem.removeChild(taskitem);
-    
-    }
-
-    function checktask(){
-
-        console.log("Check button clicked.")
-        checkbutton.innerHTML = "Check"
+        console.log("Task Deleted.")
+        row.remove();
     
     }
 
 }
-var sr = 1;
-addbutton.addEventListener("click",addrow)
+
 

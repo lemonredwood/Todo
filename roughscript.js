@@ -6,17 +6,22 @@ function addtasks(){
 
     var taskitem = document.createElement("li")
     
-    taskitem.innerHTML = "New Task"
+    taskitem.innerHTML = "New Task";    
     showtasks.appendChild(taskitem);
    
 
     console.log("New element appended.")
-
+    addtable;
 
 
 }
 function deletetask(){
-    showtasks.removeChild(taskitem1)
+    showtasks.removeChild(taskitem1);
+    
+}
+function addtable(){
+    const completedtasks = document.createElement("table");
+    
 }
 addtask.addEventListener("click",addtasks)
 btn1.addEventListener("click",deletetask)
